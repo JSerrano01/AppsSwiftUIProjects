@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapExample: View {
+    @State var position = MapCameraPosition.region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 28.0034123, longitude: -16.0342342), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )
+    )
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Map()
     }
 }
 

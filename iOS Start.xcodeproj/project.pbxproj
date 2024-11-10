@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E09FC9EB2CE129800019A648 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E09FC9EA2CE129800019A648 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E005F2072CD54C2600A67B41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,11 +38,23 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
+				Components/ButtonExample.swift,
 				Components/ImageExample.swift,
-				ContentView.swift,
+				Components/LabelExample.swift,
+				Components/ListExample.swift,
+				Components/LoginView.swift,
+				Components/MapExample.swift,
+				Components/TextExample.swift,
+				Components/TextFieldExample.swift,
+				IMC/IMCResult.swift,
+				IMC/IMCView.swift,
 				iOS_StartApp.swift,
 				MainView.swift,
+				MenuView.swift,
 				"Preview Content/Preview Assets.xcassets",
+				SuperHero/ApiNetwork.swift,
+				SuperHero/SuperHeroDetail.swift,
+				SuperHero/SuperHeroSearcher.swift,
 			);
 			target = E005F1F52CD54C2400A67B41 /* iOS Start */;
 		};
@@ -46,9 +62,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
-				ContentView.swift,
+				Components/LoginView.swift,
 				iOS_StartApp.swift,
 				MainView.swift,
+				MenuView.swift,
 				"Preview Content/Preview Assets.xcassets",
 			);
 			target = E005F2052CD54C2600A67B41 /* iOS StartTests */;
@@ -56,16 +73,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E005F2092CD54C2600A67B41 /* iOS StartTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "iOS StartTests";
-			sourceTree = "<group>";
-		};
-		E005F2132CD54C2600A67B41 /* iOS StartUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "iOS StartUITests";
-			sourceTree = "<group>";
-		};
 		E01230E42CD556FE00892124 /* iOS Start */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E09FC9EB2CE129800019A648 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				E01230E42CD556FE00892124 /* iOS Start */,
-				E005F2092CD54C2600A67B41 /* iOS StartTests */,
-				E005F2132CD54C2600A67B41 /* iOS StartUITests */,
 				E005F1F72CD54C2400A67B41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			);
 			name = "iOS Start";
 			packageProductDependencies = (
+				E09FC9EA2CE129800019A648 /* SDWebImageSwiftUI */,
 			);
 			productName = "iOS Start";
 			productReference = E005F1F62CD54C2400A67B41 /* iOS Start.app */;
@@ -158,7 +165,6 @@
 				E005F2082CD54C2600A67B41 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				E005F2092CD54C2600A67B41 /* iOS StartTests */,
 				E01230E42CD556FE00892124 /* iOS Start */,
 			);
 			name = "iOS StartTests";
@@ -180,9 +186,6 @@
 			);
 			dependencies = (
 				E005F2122CD54C2600A67B41 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E005F2132CD54C2600A67B41 /* iOS StartUITests */,
 			);
 			name = "iOS StartUITests";
 			packageProductDependencies = (
@@ -223,6 +226,9 @@
 			);
 			mainGroup = E005F1ED2CD54C2400A67B41;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E09FC9E92CE129800019A648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E005F1F72CD54C2400A67B41 /* Products */;
 			projectDirPath = "";
@@ -431,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E09FC9E92CE129800019A648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E09FC9EA2CE129800019A648 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E09FC9E92CE129800019A648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E005F1EE2CD54C2400A67B41 /* Project object */;
 }
